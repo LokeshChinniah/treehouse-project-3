@@ -1,0 +1,12 @@
+
+h1,
+button {
+  font-family: 'Merriweather', serif;
+}
+
+label,
+p,
+legend,
+input:required {
+  font-family: 'Raleway', serif;
+}
