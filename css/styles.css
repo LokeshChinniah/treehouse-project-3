@@ -29,7 +29,7 @@ body {
 }
 
 .main-info {
-  border-bottom: 3px solid #09547d;
+  border-bottom: 4px solid #09547d;
 }
 
 .copyright {
@@ -53,6 +53,8 @@ p {
 
 .input-field {
   background-color: #e8e8e8;
+  border-style: hidden;
+  padding: 10px;
 }
 
 .checkbox,
@@ -66,9 +68,21 @@ p {
   color: grey;
 }
 
-.border {
-  border-top: 2px solid #09547d;
-  border-bottom: none;
-  border-right: none;
-  border-left: none;
+.submit {
+  background-color: #47a7a7;
+  color: white;
+  border-style: hidden;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  padding: 9px 0px;
+}
+
+legend {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
