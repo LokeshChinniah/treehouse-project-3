@@ -10,3 +10,65 @@ legend,
 input:required {
   font-family: 'Raleway', serif;
 }
+
+.main-header {
+  background-color: #09547d;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+body {
+  margin: 0px;
+}
+
+.main-header h1 {
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.main-info {
+  border-bottom: 3px solid #09547d;
+}
+
+.copyright {
+  font-style: italic;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.main-form {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  flex-direction: column;
+}
+
+.input-field {
+  background-color: #e8e8e8;
+}
+
+.checkbox,
+.radio {
+  display: block;
+}
+
+select,
+option,
+p {
+  color: grey;
+}
+
+.border {
+  border-top: 2px solid #09547d;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
