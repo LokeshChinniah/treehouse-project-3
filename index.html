@@ -21,8 +21,8 @@
       </div>
 
       <form method="post">
-
-        <fieldset class="border">
+      <div class="border">
+        <fieldset>
 
           <legend>Contact Information</legend>
           <div class="main-form">
@@ -37,7 +37,7 @@
 
           <div class="main-form">
             <label for="phone">Phone Number</label>
-            <input class="input-field" type="number" name="phone" id="phone" placeholder="###-###-####" required>
+            <input class="input-field" type="number" name="phone" id="phone" placeholder="123-456-7890" required>
           </div>
 
           <div class="main-form">
@@ -52,7 +52,7 @@
 
           <div class="main-form">
             <label for="state">State</label>
-            <select class="input-field" name="state">
+            <select class="input-field" name="state" id="state">
               <option>New York</option>
               <option>California</option>
               <option>Massachussetts</option>
@@ -62,43 +62,40 @@
 
           <div class="main-form">
             <label for="zip-code"> Zip Code</label>
-            <input class="input-field" type="number" name="zip-code" id="zip-code">
+            <input class="input-field" type="number" name="zip-code" id="zip-code" placeholder="12345" required>
           </div>
 
         </fieldset>
-
-        <fieldset class="border">
+      </div>
+      <div class="border">
+        <fieldset>
 
         <legend>Newsletter</legend>
 
         <label>Select the newsletters you would like to receive</label>
 
-        <div class="main-form checkbox">
-          <input type="checkbox" name="html_news" id="html_news">
-          <label for="html_news">HTML News</label>
-          <input type="checkbox" name="css_news" id="css_news">
-          <label for="css_news">CSS News</label>
-          <input type="checkbox" name="javascript_news" id="javascript_news">
-          <label for="javascript_news">Javascript News</label>
-        </div>
+        <label class="check-label" for="html_news"><input class="check" type="checkbox" name="html_news" id="html_news"><span class="check-custom"></span>HTML News</label>
+
+        <label class="check-label" for="css_news"><input class="check" type="checkbox" name="css_news" id="css_news"><span class="check-custom"></span>CSS News</label>
+
+        <label class="check-label" for="javascript_news"><input class="check" type="checkbox" name="javascript_news" id="javascript_news"><span class="check-custom"></span>Javascript News</label>
 
         <label>Newsletter format</label>
 
-        <div class="main-form radio">
-          <input type="radio" name="format" id="html" value="html">
-          <label for="html">HTML</label>
-          <input type="radio" name="format" id="plain_text" value="plain_text">
-          <label for="plain_text">Plain text</label>
-        </div>
+        <input type="radio" name="format" id="html" value="html">
+        <label for="html">HTML</label>
+        <input type="radio" name="format" id="plain_text" value="plain_text">
+        <label for="plain_text">Plain text</label>
 
         <div class="main-form comments">
-        <label for="comment">Other topics you'd like to hear about</label>
-        <textarea class="input-field" id="comment" name="name" rows="8" cols="80"></textarea>
+          <label for="comment">Other topics you'd like to hear about</label>
+          <textarea class="input-field" id="comment" name="name" rows="8" cols="65"></textarea>
         </div>
 
-        <button type="submit" name="sign_up" class="submit">Sign Up</button>
-        </fieldset>
+        <button type="submit" name="sign_up" class="sign-up">Sign Up</button>
 
+        </fieldset>
+      </div>
         <p class="copyright">Copyright The Code Review</p>
       </form>
   </main>
