@@ -1,4 +1,8 @@
 
+* {
+  box-sizing: border-box;
+}
+
 h1,
 button {
   font-family: 'Merriweather', serif;
@@ -19,6 +23,11 @@ input:required {
 
 body {
   margin: 0px;
+  line-height: 1;
+}
+
+.wrapper {
+  padding: 20px;
 }
 
 .main-header h1 {
@@ -36,6 +45,10 @@ body {
   font-style: italic;
 }
 
+footer {
+  padding-bottom: 100px;
+}
+
 h1 {
   text-align: center;
 }
@@ -43,6 +56,12 @@ h1 {
 p {
   text-align: center;
 }
+
+textarea {
+  margin: .5em 0 2em;
+}
+
+
 
 .main-form {
   display: flex;
@@ -56,7 +75,11 @@ p {
   border-style: hidden;
   padding: 10px;
   width: 100%;
-  margin-left: -10px;
+}
+
+textarea,
+input {
+  align-self: center;
 }
 
 select,
@@ -66,14 +89,19 @@ p {
 }
 
 button {
-  background-color: #47a7a7;
+	background-color: #47a7a7;
   color: white;
-  font-size: 1em;
-  border-style: hidden;
-  padding: 1.35rem;
-  text-align: center;
-  width: 100%;
-  margin-left: -10px;
+  font-size: 1.25em;
+  font-weight: bold;
+	border: #4dbbb5;
+	width: 100%;
+	border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 1em;
+}
+
+.newsletter {
+  padding-bottom: 0;
 }
 
 .border {
@@ -83,6 +111,7 @@ button {
 
 input[name="zip-code"] {
   width: 50%;
+  align-self: flex-start;
 }
 
 .checkbox label,
@@ -91,10 +120,68 @@ input[name="zip-code"] {
   flex-direction: row;
 }
 
-.check input{
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+.checkbox {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.checkbox:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align:middle;
+	background-color: #eeeff1;
+	color: #f3f3f3;
+  border-radius: 5px;
+  margin: 0 20px 2px 0;
+}
+
+input[type=checkbox]:checked + .checkbox:before {
+	font-family: 'FontAwesome';
+	content: "\f00c";
+	border: 2px solid #17E5D6;
+	border-radius: 5px;
+	color: #17E5D6;
+	text-align: center;
+	line-height: 1.3;
+	font-size: .8em;
+	width: 18px;
+	height: 18px;
+	margin-right: 18px;
+}
+
+[type="radio"] + span:before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #eeeff1;
+  box-shadow: 0 0 0 2px #eeeff1;
+  margin: 0 20px 4px 0;
+  -webkit-transition: box-shadow 0.5s ease, background-color 0.3s ease;
+  transition: box-shadow 0.5s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+[type="radio"]:checked + span:before {
+  border: 4px solid white;
+  background: #17E5D6;
+  box-shadow: 0 0 0 2px #17E5D6;
+  width: 10px;
+  height: 10px;
+  margin: 0 20px 0 -2px;
+}
+
+select option[data-default] {
+  color: #888;
 }
 
 #html_news {
@@ -103,7 +190,9 @@ input[name="zip-code"] {
 }
 
 fieldset {
-  border: none;
+  border: 0;
+	margin: 0 auto;
+	padding: 0;
   display: flex;
 }
 
@@ -112,8 +201,48 @@ label {
 }
 
 legend {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 1.25em;
+  padding: .5em 0;
+  font-size: 1.5em;
+  line-height: 2;
   font-weight: bolder;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+	border-radius: 5px;
+	background-color: #eeeff1;
+	border: 3px solid #eeeff1;
+	padding: 20px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 800px;
+  }
+
+  .info label {
+    width: 25%;
+    float: left;
+    margin: 20px 0;
+  }
+
+  .info input,
+  .info select {
+    width: 75%;
+    float: right;
+    margin: 10px 0;
+  }
+
+  .info {
+    display: inline;
+  }
+
+  input[name="zip-code"] {
+    width: 25%;
+    align-self: flex-start;
+  }
+
 }
