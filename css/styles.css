@@ -221,12 +221,19 @@ textarea {
 @media screen and (min-width: 768px) {
   .wrapper {
     max-width: 800px;
+    margin: auto;
   }
 
   .info label {
     width: 25%;
     float: left;
     margin: 20px 0;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    color: #09547d;
   }
 
   .info input,
