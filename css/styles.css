@@ -28,6 +28,8 @@ body {
 
 .wrapper {
   padding: 20px;
+  background-color: #EFF4F4;
+  border-radius: 10px;
 }
 
 .main-header h1 {
@@ -234,6 +236,8 @@ textarea {
   textarea:focus,
   select:focus {
     color: #09547d;
+    -webkit-transition:  all 0.3s ease-in-out;
+    transition:  all 0.3s ease-in-out;
   }
 
   .info input,
